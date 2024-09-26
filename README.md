@@ -1,4 +1,3 @@
-
 ## Set Up and Run the React Project
 
 # Installation
