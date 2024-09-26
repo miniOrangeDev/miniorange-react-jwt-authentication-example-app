@@ -1,4 +1,6 @@
-## Set Up and Run the React Project
+# JWT Authentication in React App with miniOrange
+
+This guide outlines the steps to quickly integrate JWT authentication into your React app using miniOrange as the Identity Provider. 
 
 # Installation
 
@@ -32,18 +34,18 @@ These URLs should reflect the origins where your application is running. Allowed
 
 - Go to **Apps**, and from the dropdown next to your configured React App, click **Select**.
 - Click on **Certificate** to download the RSA256 certificate.
-- Place the downloaded certificate in the `src` folder of your miniOrange React app.
-- In `Home.js`, ensure the certificate is imported with the name `RSA256Cert.crt`. If you change the file name, update the import statement accordingly.
+- Place the downloaded certificate in the `src` folder of your miniorange-react-jwt-authentication-example-app.
+- In `TokenHandler.js`, ensure the certificate is imported with the name `RSA256Cert.crt`. If you change the file name, update the import statement accordingly.
 
 ### 5. Set Up Endpoints
 
 - Click **Edit** from the dropdown next to your app in the miniOrange dashboard.
 - Scroll down to the **Endpoints** section.
 - As miniOrange is the primary Identity Provider, copy the **SSO URL for using miniOrange as Authentication Source** provided in the Endpoints section.
-- In `App.js`, replace `<SSO URL>` in the following line:
+- In `App.js`, replace `SSO URL` in the following line:
 
     ```jsx
-    <Nav.Link href="<SSO URL>">Login</Nav.Link>
+     <Nav.Link href="SSO_URL">Login</Nav.Link>
     ```
 
   with the copied **SSO URL**.
@@ -54,10 +56,10 @@ These URLs should reflect the origins where your application is running. Allowed
 - In `Home.js`, locate the following line:
 
     ```javascript
-    window.location.href = "<SLO_URL>";
+    window.location.href = "SLO_URL";
     ```
 
-  Replace `<SLO_URL>` with the copied **Single Logout URL**.
+  Replace `SLO_URL` with the copied **Single Logout URL**.
 
 ### 8. Create a User in miniOrange
 
@@ -65,7 +67,11 @@ If you haven't already, create a user in miniOrange.
 
 ### 9. Run the Application
 
-Navigate to `http://localhost:3002`. Your `miniorange-react-connector-starter-app` should now be running.
+In the project directory, run:
+
+### `npm start`
+
+Navigate to `http://localhost:3002`. Your `miniorange-react-jwt-authentication-example-app` should now be running.
 
 ### 10. Test the Login
 
