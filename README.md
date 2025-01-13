@@ -46,28 +46,16 @@ These URLs should reflect the origins where your application is running. Allowed
 - Click **Edit** from the dropdown next to your app in the miniOrange dashboard.
 - Scroll down to the **Endpoints** section.
 - As miniOrange is the primary Identity Provider, copy the **SSO URL for using miniOrange as Authentication Source** provided in the Endpoints section.
-- In `App.js`, replace `SSO URL` in the following line:
-
-    ```jsx
-     <Nav.Link href="SSO_URL">Login</Nav.Link>
-    ```
-
-  with the copied **SSO URL**.
+- Go to `.env` file, replace `SSO_URL` with the copied **SSO URL**.
 
 ### 7. Configure Single Logout (SLO) URL in Home.js
 
 - Copy the **Single Logout URL** from the Endpoints section.
-- In `Home.js`, locate the following line:
-
-    ```javascript
-    window.location.href = "SLO_URL";
-    ```
-
-  Replace `SLO_URL` with the copied **Single Logout URL**.
+- Go to `.env` file, replace `SLO_URL` with the copied **Single Logout URL**.
 
 ### 8. Create a User in miniOrange
 
-If you haven't already, create a user in miniOrange.
+If you haven't already, [create a user](https://www.miniorange.com/iam/content-library/admin-docs/manage-users) in miniOrange.
 
 ### 9. Run the Application
 
