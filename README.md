@@ -12,9 +12,11 @@ This will install all the necessary dependencies. The page will automatically re
 
 ## Configure MiniOrange
 
+If you have not created an account in MiniOrange, please create using [this](https://www.miniorange.com/iam/free-trial) link.
+
 ### 1. Create a React JWT Application in the miniOrange Dashboard
 
-Visit the [miniOrange Dashboard](https://login.xecurify.com) and create a new React JWT Application.
+Visit the [miniOrange Dashboard](https://login.xecurify.com) and create a new React [JWT Application](https://www.miniorange.com/iam/content-library/admin-docs/how-to-add-jwt-app).
 
 ### 2. Configure Your React Application
 
@@ -36,6 +38,8 @@ These URLs should reflect the origins where your application is running. Allowed
 - Click on **Certificate** to download the RSA256 certificate.
 - Place the downloaded certificate in the `src` folder of your miniorange-react-jwt-authentication-example-app.
 - In `TokenHandler.js`, ensure the certificate is imported with the name `RSA256Cert.crt`. If you change the file name, update the import statement accordingly.
+
+![Downloading RSA256 Certificate](./src/images/downloadCert.png)
 
 ### 5. Set Up Endpoints
 

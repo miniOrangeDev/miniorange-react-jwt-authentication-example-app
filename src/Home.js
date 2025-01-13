@@ -17,7 +17,7 @@ function Home() {
   const handleLogout = (e) => {
     e.preventDefault();
     sessionStorage.clear();
-    window.location.href = "SLO_URL";
+    window.location.href = process.env.REACT_APP_SLO_URL;
   };
 
   return (
